@@ -6,8 +6,6 @@ module.exports = {
     async index(req, res) {
         const { user_id } = req.params;
 
-        console.log('Consultado endereço do ' + user_id)
-
         const user = await User.findByPk(user_id, {
             //incluir associate de values
             include: {
